@@ -1,4 +1,33 @@
-@import 'reset/reset.css';
+article,
+details,
+section,
+summary,
+aside,
+main,
+menu,
+nav,
+figcaption,
+figure,
+footer,
+header,
+hgroup {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
 html {
   font-family: 'Roboto';
   font-weight: 300;
@@ -15,11 +44,11 @@ div div {
   margin-top: 0;
   margin-bottom: 30px;
 }
-div div:before{
+div div:before {
   content: '';
   display: table;
 }
-div div:after{
+div div:after {
   content: '';
   display: table;
   clear: both;
@@ -29,11 +58,11 @@ div div div {
   margin-bottom: 0;
   *zoom: 1;
 }
-div div div:before{
+div div div:before {
   content: '';
   display: table;
 }
-div div div:after{
+div div div:after {
   content: '';
   display: table;
   clear: both;
@@ -48,20 +77,20 @@ section {
   margin-bottom: 30px;
   padding: 30px 30px 0;
 }
-section:before{
+section:before {
   content: '';
   display: table;
 }
-section:after{
+section:after {
   content: '';
   display: table;
   clear: both;
 }
-section:before{
+section:before {
   content: '';
   display: table;
 }
-section:after{
+section:after {
   content: '';
   display: table;
   clear: both;
@@ -79,78 +108,78 @@ section:nth-of-type(1) div div {
   width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
   background: #22c1fd;
 }
-section:nth-of-type(1) div div:nth-child(1n){
+section:nth-of-type(1) div div:nth-child(1n) {
   float: left;
   margin-right: 30px;
   clear: none;
 }
-section:nth-of-type(1) div div:last-child{
+section:nth-of-type(1) div div:last-child {
   margin-right: 0;
 }
-section:nth-of-type(1) div div:nth-child(1n){
+section:nth-of-type(1) div div:nth-child(1n) {
   margin-right: 0;
   float: right;
 }
-section:nth-of-type(1) div div:nth-child(1n + 1){
+section:nth-of-type(1) div div:nth-child(1n + 1) {
   clear: left;
 }
-@media (min-width: 500px) {
+@media only screen and (min-width: 410px) {
   section:nth-of-type(1) div div {
     width: calc(99.99% * 1/2 - (30px - 30px * 1/2));
   }
-  section:nth-of-type(1) div div:nth-child(1n){
+  section:nth-of-type(1) div div:nth-child(1n) {
     float: left;
     margin-right: 30px;
     clear: none;
   }
-  section:nth-of-type(1) div div:last-child{
+  section:nth-of-type(1) div div:last-child {
     margin-right: 0;
   }
-  section:nth-of-type(1) div div:nth-child(2n){
+  section:nth-of-type(1) div div:nth-child(2n) {
     margin-right: 0;
     float: right;
   }
-  section:nth-of-type(1) div div:nth-child(2n + 1){
+  section:nth-of-type(1) div div:nth-child(2n + 1) {
     clear: left;
   }
 }
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   section:nth-of-type(1) div div {
     width: calc(99.99% * 1/3 - (30px - 30px * 1/3));
   }
-  section:nth-of-type(1) div div:nth-child(1n){
+  section:nth-of-type(1) div div:nth-child(1n) {
     float: left;
     margin-right: 30px;
     clear: none;
   }
-  section:nth-of-type(1) div div:last-child{
+  section:nth-of-type(1) div div:last-child {
     margin-right: 0;
   }
-  section:nth-of-type(1) div div:nth-child(3n){
+  section:nth-of-type(1) div div:nth-child(3n) {
     margin-right: 0;
     float: right;
   }
-  section:nth-of-type(1) div div:nth-child(3n + 1){
+  section:nth-of-type(1) div div:nth-child(3n + 1) {
     clear: left;
   }
 }
-@media (min-width: 1100px) {
+@media only screen and (min-width: 1050px) {
   section:nth-of-type(1) div div {
     width: calc(99.99% * 1/4 - (30px - 30px * 1/4));
   }
-  section:nth-of-type(1) div div:nth-child(1n){
+  section:nth-of-type(1) div div:nth-child(1n) {
     float: left;
     margin-right: 30px;
     clear: none;
   }
-  section:nth-of-type(1) div div:last-child{
+  section:nth-of-type(1) div div:last-child {
     margin-right: 0;
   }
-  section:nth-of-type(1) div div:nth-child(4n){
+  section:nth-of-type(1) div div:nth-child(4n) {
     margin-right: 0;
     float: right;
   }
-  section:nth-of-type(1) div div:nth-child(4n + 1){
+  section:nth-of-type(1) div div:nth-child(4n + 1) {
     clear: left;
   }
 }
@@ -161,20 +190,40 @@ section:nth-of-type(2) div div {
   width: calc(99.99% * 1/3 - (30px - 30px * 1/3));
   background: #48989f;
 }
-section:nth-of-type(2) div div:nth-child(1n){
+section:nth-of-type(2) div div:nth-child(1n) {
   float: left;
   margin-right: 30px;
   clear: none;
 }
-section:nth-of-type(2) div div:last-child{
+section:nth-of-type(2) div div:last-child {
   margin-right: 0;
 }
-section:nth-of-type(2) div div:nth-child(3n){
+section:nth-of-type(2) div div:nth-child(3n) {
   margin-right: 0;
   float: right;
 }
-section:nth-of-type(2) div div:nth-child(3n + 1){
+section:nth-of-type(2) div div:nth-child(3n + 1) {
   clear: left;
+}
+@media only screen and (max-width: 410px) {
+  section:nth-of-type(2) div div {
+    width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
+  }
+  section:nth-of-type(2) div div:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  section:nth-of-type(2) div div:last-child {
+    margin-right: 0;
+  }
+  section:nth-of-type(2) div div:nth-child(1n) {
+    margin-right: 0;
+    float: right;
+  }
+  section:nth-of-type(2) div div:nth-child(1n + 1) {
+    clear: left;
+  }
 }
 section:nth-of-type(2) div div:first-child {
   margin-left: calc(99.99% * (-1/3 * -1) - (30px - 30px * (-1/3 * -1)) + 30px) !important;
@@ -186,38 +235,38 @@ section:nth-of-type(3) div div {
   width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
   background: #68977c;
 }
-section:nth-of-type(3) div div:nth-child(1n){
+section:nth-of-type(3) div div:nth-child(1n) {
   float: left;
   margin-right: 30px;
   clear: none;
 }
-section:nth-of-type(3) div div:last-child{
+section:nth-of-type(3) div div:last-child {
   margin-right: 0;
 }
-section:nth-of-type(3) div div:nth-child(1n){
+section:nth-of-type(3) div div:nth-child(1n) {
   margin-right: 0;
   float: right;
 }
-section:nth-of-type(3) div div:nth-child(1n + 1){
+section:nth-of-type(3) div div:nth-child(1n + 1) {
   clear: left;
 }
 @media (min-width: 500px) {
   section:nth-of-type(3) div div {
     width: calc(99.99% * 1/3 - (30px - 30px * 1/3));
   }
-  section:nth-of-type(3) div div:nth-child(1n){
+  section:nth-of-type(3) div div:nth-child(1n) {
     float: left;
     margin-right: 30px;
     clear: none;
   }
-  section:nth-of-type(3) div div:last-child{
+  section:nth-of-type(3) div div:last-child {
     margin-right: 0;
   }
-  section:nth-of-type(3) div div:nth-child(3n){
+  section:nth-of-type(3) div div:nth-child(3n) {
     margin-right: 0;
     float: right;
   }
-  section:nth-of-type(3) div div:nth-child(3n + 1){
+  section:nth-of-type(3) div div:nth-child(3n + 1) {
     clear: left;
   }
 }
@@ -231,38 +280,38 @@ section:nth-of-type(3) div div div {
   width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
   margin-bottom: 30px;
 }
-section:nth-of-type(3) div div div:nth-child(1n){
+section:nth-of-type(3) div div div:nth-child(1n) {
   float: left;
   margin-right: 30px;
   clear: none;
 }
-section:nth-of-type(3) div div div:last-child{
+section:nth-of-type(3) div div div:last-child {
   margin-right: 0;
 }
-section:nth-of-type(3) div div div:nth-child(1n){
+section:nth-of-type(3) div div div:nth-child(1n) {
   margin-right: 0;
   float: right;
 }
-section:nth-of-type(3) div div div:nth-child(1n + 1){
+section:nth-of-type(3) div div div:nth-child(1n + 1) {
   clear: left;
 }
 @media (min-width: 500px) {
   section:nth-of-type(3) div div div {
     width: calc(99.99% * 1/2 - (30px - 30px * 1/2));
   }
-  section:nth-of-type(3) div div div:nth-child(1n){
+  section:nth-of-type(3) div div div:nth-child(1n) {
     float: left;
     margin-right: 30px;
     clear: none;
   }
-  section:nth-of-type(3) div div div:last-child{
+  section:nth-of-type(3) div div div:last-child {
     margin-right: 0;
   }
-  section:nth-of-type(3) div div div:nth-child(2n){
+  section:nth-of-type(3) div div div:nth-child(2n) {
     margin-right: 0;
     float: right;
   }
-  section:nth-of-type(3) div div div:nth-child(2n + 1){
+  section:nth-of-type(3) div div div:nth-child(2n + 1) {
     clear: left;
   }
 }
@@ -276,7 +325,7 @@ section:nth-of-type(4) div {
   height: 285px;
   float: none;
 }
-section:nth-of-type(4) div > *{
+section:nth-of-type(4) div > * {
   position: absolute;
   top: 50%;
   right: auto;
@@ -291,19 +340,19 @@ section:nth-of-type(4) div div {
   width: calc(99.99% * 1/3 - (30px - 30px * 1/3));
   height: 100px;
 }
-section:nth-of-type(4) div div:nth-child(1n){
+section:nth-of-type(4) div div:nth-child(1n) {
   float: left;
   margin-right: 30px;
   clear: none;
 }
-section:nth-of-type(4) div div:last-child{
+section:nth-of-type(4) div div:last-child {
   margin-right: 0;
 }
-section:nth-of-type(4) div div:nth-child(3n){
+section:nth-of-type(4) div div:nth-child(3n) {
   margin-right: 0;
   float: right;
 }
-section:nth-of-type(4) div div:nth-child(3n + 1){
+section:nth-of-type(4) div div:nth-child(3n + 1) {
   clear: left;
 }
 section:nth-of-type(5) {
@@ -312,81 +361,80 @@ section:nth-of-type(5) {
 section:nth-of-type(5) div div {
   width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
   background: #ef8b22;
-  padding: 15px;
   height: auto;
 }
-section:nth-of-type(5) div div:nth-child(1n){
+section:nth-of-type(5) div div:nth-child(1n) {
   float: left;
   margin-right: 30px;
   clear: none;
 }
-section:nth-of-type(5) div div:last-child{
+section:nth-of-type(5) div div:last-child {
   margin-right: 0;
 }
-section:nth-of-type(5) div div:nth-child(1n){
+section:nth-of-type(5) div div:nth-child(1n) {
   margin-right: 0;
   float: right;
 }
-section:nth-of-type(5) div div:nth-child(1n + 1){
+section:nth-of-type(5) div div:nth-child(1n + 1) {
   clear: left;
 }
-@media (min-width: 500px) {
+@media only screen and (min-width: 410px) {
   section:nth-of-type(5) div div {
     width: calc(99.99% * 2/4 - (30px - 30px * 2/4));
   }
-  section:nth-of-type(5) div div:nth-child(1n){
+  section:nth-of-type(5) div div:nth-child(1n) {
     float: left;
     margin-right: 30px;
     clear: none;
   }
-  section:nth-of-type(5) div div:last-child{
+  section:nth-of-type(5) div div:last-child {
     margin-right: 0;
   }
-  section:nth-of-type(5) div div:nth-child(2n){
+  section:nth-of-type(5) div div:nth-child(2n) {
     margin-right: 0;
     float: right;
   }
-  section:nth-of-type(5) div div:nth-child(2n + 1){
+  section:nth-of-type(5) div div:nth-child(2n + 1) {
     clear: left;
   }
 }
-@media (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   section:nth-of-type(5) div div {
     width: calc(99.99% * 2/6 - (30px - 30px * 2/6));
   }
-  section:nth-of-type(5) div div:nth-child(1n){
+  section:nth-of-type(5) div div:nth-child(1n) {
     float: left;
     margin-right: 30px;
     clear: none;
   }
-  section:nth-of-type(5) div div:last-child{
+  section:nth-of-type(5) div div:last-child {
     margin-right: 0;
   }
-  section:nth-of-type(5) div div:nth-child(3n){
+  section:nth-of-type(5) div div:nth-child(3n) {
     margin-right: 0;
     float: right;
   }
-  section:nth-of-type(5) div div:nth-child(3n + 1){
+  section:nth-of-type(5) div div:nth-child(3n + 1) {
     clear: left;
   }
 }
-@media (min-width: 1100px) {
+@media only screen and (min-width: 800px) {
   section:nth-of-type(5) div div {
     width: calc(99.99% * 2/8 - (30px - 30px * 2/8));
   }
-  section:nth-of-type(5) div div:nth-child(1n){
+  section:nth-of-type(5) div div:nth-child(1n) {
     float: left;
     margin-right: 30px;
     clear: none;
   }
-  section:nth-of-type(5) div div:last-child{
+  section:nth-of-type(5) div div:last-child {
     margin-right: 0;
   }
-  section:nth-of-type(5) div div:nth-child(4n){
+  section:nth-of-type(5) div div:nth-child(4n) {
     margin-right: 0;
     float: right;
   }
-  section:nth-of-type(5) div div:nth-child(4n + 1){
+  section:nth-of-type(5) div div:nth-child(4n + 1) {
     clear: left;
   }
 }
@@ -406,7 +454,7 @@ section:nth-of-type(6) div div {
   margin-bottom: 30px;
   background: #007bf2;
 }
-section:nth-of-type(6) div div:last-child{
+section:nth-of-type(6) div div:last-child {
   margin-bottom: 0;
 }
 section:nth-of-type(7) {
@@ -416,11 +464,11 @@ section:nth-of-type(7) div {
   margin-bottom: 30px;
   *zoom: 1;
 }
-section:nth-of-type(7) div:before{
+section:nth-of-type(7) div:before {
   content: '';
   display: table;
 }
-section:nth-of-type(7) div:after{
+section:nth-of-type(7) div:after {
   content: '';
   display: table;
   clear: both;
@@ -430,24 +478,24 @@ section:nth-of-type(7) div div {
   height: calc(99.99% * 1/3 - (30px - 30px * 1/3));
   background: #ff3a16;
 }
-section:nth-of-type(7) div div:nth-child(1n){
+section:nth-of-type(7) div div:nth-child(1n) {
   float: left;
   margin-right: 30px;
   margin-bottom: 30px;
   clear: none;
 }
-section:nth-of-type(7) div div:last-child{
+section:nth-of-type(7) div div:last-child {
   margin-right: 0;
   margin-bottom: 0;
 }
-section:nth-of-type(7) div div:nth-child(3n){
+section:nth-of-type(7) div div:nth-child(3n) {
   margin-right: 0;
   float: right;
 }
-section:nth-of-type(7) div div:nth-child(3n + 1){
+section:nth-of-type(7) div div:nth-child(3n + 1) {
   clear: left;
 }
-section:nth-of-type(7) div div:nth-last-child(-n + 3){
+section:nth-of-type(7) div div:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 section:nth-of-type(8) {
@@ -457,40 +505,80 @@ section:nth-of-type(8) div div {
   background: #4c7e80;
 }
 section:nth-of-type(8) div div:first-child {
-  width: calc(99.99% * 1/3 - (30px - 30px * 1/3));
+  width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
 }
-section:nth-of-type(8) div div:first-child:nth-child(1n){
+section:nth-of-type(8) div div:first-child:nth-child(1n) {
   float: left;
   margin-right: 30px;
   clear: none;
 }
-section:nth-of-type(8) div div:first-child:last-child{
+section:nth-of-type(8) div div:first-child:last-child {
   margin-right: 0;
 }
-section:nth-of-type(8) div div:first-child:nth-child(3n){
+section:nth-of-type(8) div div:first-child:nth-child(1n) {
   margin-right: 0;
   float: right;
 }
-section:nth-of-type(8) div div:first-child:nth-child(3n + 1){
+section:nth-of-type(8) div div:first-child:nth-child(1n + 1) {
   clear: left;
+}
+@media only screen and (min-width: 600px) {
+  section:nth-of-type(8) div div:first-child {
+    width: calc(99.99% * 1/3 - (30px - 30px * 1/3));
+  }
+  section:nth-of-type(8) div div:first-child:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  section:nth-of-type(8) div div:first-child:last-child {
+    margin-right: 0;
+  }
+  section:nth-of-type(8) div div:first-child:nth-child(3n) {
+    margin-right: 0;
+    float: right;
+  }
+  section:nth-of-type(8) div div:first-child:nth-child(3n + 1) {
+    clear: left;
+  }
 }
 section:nth-of-type(8) div div:last-child {
-  width: calc(99.99% * 2/3 - (30px - 30px * 2/3));
+  width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
 }
-section:nth-of-type(8) div div:last-child:nth-child(1n){
+section:nth-of-type(8) div div:last-child:nth-child(1n) {
   float: left;
   margin-right: 30px;
   clear: none;
 }
-section:nth-of-type(8) div div:last-child:last-child{
+section:nth-of-type(8) div div:last-child:last-child {
   margin-right: 0;
 }
-section:nth-of-type(8) div div:last-child:nth-child(3n){
+section:nth-of-type(8) div div:last-child:nth-child(1n) {
   margin-right: 0;
   float: right;
 }
-section:nth-of-type(8) div div:last-child:nth-child(3n + 1){
+section:nth-of-type(8) div div:last-child:nth-child(1n + 1) {
   clear: left;
+}
+@media only screen and (min-width: 600px) {
+  section:nth-of-type(8) div div:last-child {
+    width: calc(99.99% * 2/3 - (30px - 30px * 2/3));
+  }
+  section:nth-of-type(8) div div:last-child:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  section:nth-of-type(8) div div:last-child:last-child {
+    margin-right: 0;
+  }
+  section:nth-of-type(8) div div:last-child:nth-child(3n) {
+    margin-right: 0;
+    float: right;
+  }
+  section:nth-of-type(8) div div:last-child:nth-child(3n + 1) {
+    clear: left;
+  }
 }
 section:nth-of-type(9) {
   background: #00ff7f;
@@ -499,19 +587,19 @@ section:nth-of-type(9) div div {
   background: #00b359;
   width: calc(99.99% * 1/2 - (30px - 30px * 1/2));
 }
-section:nth-of-type(9) div div:nth-child(1n){
+section:nth-of-type(9) div div:nth-child(1n) {
   float: left;
   margin-right: 30px;
   clear: none;
 }
-section:nth-of-type(9) div div:last-child{
+section:nth-of-type(9) div div:last-child {
   margin-right: 0;
 }
-section:nth-of-type(9) div div:nth-child(2n){
+section:nth-of-type(9) div div:nth-child(2n) {
   margin-right: 0;
   float: right;
 }
-section:nth-of-type(9) div div:nth-child(2n + 1){
+section:nth-of-type(9) div div:nth-child(2n + 1) {
   clear: left;
 }
 section:nth-of-type(9) div div:first-child {

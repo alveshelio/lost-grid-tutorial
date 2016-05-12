@@ -9,6 +9,8 @@ var imagemin = require( 'gulp-imagemin' );
 var lost = require( 'lost' );
 var connect = require( 'gulp-connect' );
 var rucksack = require( 'gulp-rucksack' );
+var rupture = require( 'rupture' );
+var typographic = require( 'typographic' );
 
 var paths = {
   stylesSource: './src/styles/',
@@ -26,15 +28,20 @@ gulp.task( 'connect', function () {
 } );
 
 gulp.task( 'rucksack', function () {
+
+  var stylusOptions = {
+    use: [ nib(), rupture(), typographic() ]
+  };
+
   var processors = [
     lost(),
     autoprefixer( {
       browsers: [ 'last 3 versions' ]
     } )
   ];
-  return gulp.src( paths.stylesSource + '*.styl' )
+  return gulp.src( paths.stylesSource + 'grid.styl' )
       .pipe( plumber() )
-      .pipe( stylus( { use: [ nib() ] } ) )
+      .pipe( stylus( stylusOptions ) )
       .pipe( rucksack() )
       .pipe( postcss( processors ) )
       .pipe( gulp.dest( paths.stylesDestination ) );
@@ -47,16 +54,21 @@ gulp.task( 'images', function () {
 } );
 
 gulp.task( 'styles', function () {
+
+  var stylusOptions = {
+    use: [ nib(), rupture(), typographic() ]
+  };
+
   var processors = [
     lost(),
     autoprefixer( {
       browsers: [ 'last 3 versions' ]
     } )
   ];
-  return gulp.src( paths.stylesSource + '*.styl' )
+  return gulp.src( paths.stylesSource + 'grid.styl' )
       .pipe( sourcemaps.init() )
       .pipe( plumber() )
-      .pipe( stylus( { use: [ nib() ] } ) )
+      .pipe( stylus( stylusOptions ) )
       .pipe( postcss( processors ) )
       .pipe( sourcemaps.write( './' ) )
       .pipe( gulp.dest( paths.stylesDestination ) )

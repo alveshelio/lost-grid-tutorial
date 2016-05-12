@@ -1,8 +1,32 @@
-$baseFont = 16px
-$baseLH = ($baseFont * 1.618)
+@require './extra/variables'
+@require './extra/mixins'
+@require 'typographic'
+@require 'nib'
+
+normalize-html5()
+
+typographic()
 
 html
   font-family: 'Roboto'
   font-size: $baseFont
   font-weight: 300
   line-height: $baseLH
+  background: linear-gradient(top, white, black)
+
+section
+  margin: 0 auto 50px
+  width: 1200px
+  h1
+    border-rad(10px)
+
+  main
+
+    background tint(blue, 50%)
+
+    a
+      display block
+      width 100px
+      overflow ellipsis
+      shadow-stroke(gray)
+      color #fff

@@ -1,7 +1,17 @@
-@import 'reset/reset.css'
-//@lost flexbox flex
+@require './extra/variables'
+@require './extra/mixins'
+@require 'typographic'
+@require 'rupture'
+@require 'nib'
+
+normalize-html5()
 
 $block = 30px
+
+
+// Rupture media queries
+rupture.scale = 0 410px 600px 800px 1050px 1800px
+rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 'hd'
 
 html
   font-family: 'Roboto'
@@ -26,7 +36,6 @@ div
       margin-bottom: 0
       lost-utility: clearfix;
 
-
 section
   lost-center: 1140px
   lost-utility: clearfix;
@@ -48,11 +57,14 @@ section
       div
         lost-column: 1/1
         background: darken(#42CAFD, 10%)
-        @media (min-width: 500px)
+        +above(2)
+        //@media (min-width: 500px)
           lost-column: 1/2
-        @media (min-width: 800px)
+        +above(4)
+        //@media (min-width: 800px)
           lost-column: 1/3
-        @media (min-width: 1100px)
+        +above(5)
+        //@media (min-width: 1100px)
           lost-column: 1/4
 
 
@@ -65,9 +77,13 @@ section
       div
         lost-column: 1/3
         background: darken(#66b3ba, 20%)
+        +at(1)
+          lost-column: 1/1
 
       div:first-child
         lost-offset: -1/3
+
+
 
 
   // Nested Grid
@@ -121,16 +137,17 @@ section
       div
         lost-column: 1/1
         background: darken(#f19a3e, 10%)
-        padding: ($block / 2)
         height: auto
 
-        @media(min-width: 500px)
+        +above(2)
           lost-column: 2/4 2
 
-        @media(min-width: 800px)
+        +above(3)
+        //@media(min-width: 800px)
           lost-column: 2/6 3
 
-        @media(min-width: 1100px)
+        +above(4)
+        //@media(min-width: 1100px)
           lost-column: 2/8 4
 
       p
@@ -171,10 +188,13 @@ section
       div
         background: darken(#5f9ea0, 20%)
         &:first-child
-          lost-column: 1/3
+          lost-column: 1/1
+          +above(3)
+            lost-column: 1/3
         &:last-child
-          lost-column: 2/3
-
+          lost-column: 1/1
+          +above(3)
+            lost-column: 2/3
 
   // Ordering Grids
   &:nth-of-type(9)
